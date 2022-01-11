@@ -37,7 +37,8 @@ jobs:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-    # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+    
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -47,7 +48,8 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-        # Runs the code in an Apache/PHP web server container
+        
+# Runs the code in an Apache/PHP web server container
     - name: Startup web server
       run: docker run -v $(pwd):/var/www/html -dit --rm --name php ryananicholson/secure-web
           # Run OWASP Scan and create Issue of results
